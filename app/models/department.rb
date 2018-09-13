@@ -1,8 +1,9 @@
 class Department
   include Mongoid::Document
+
   field :name, type: String
 
-  embedded_in :section
-  embeds_many :items
-  embeds_many :epigraphs
+  belongs_to :section
+  has_many :items
+  has_many :epigraphs
 end

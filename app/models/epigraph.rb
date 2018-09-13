@@ -2,6 +2,6 @@ class Epigraph
   include Mongoid::Document
   field :name, type: String
 
-  embedded_in :department
-  embeds_many :items
+  belongs_to :department
+  has_many :items
 end

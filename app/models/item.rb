@@ -5,6 +5,8 @@ class Item
   field :title, type: String
   field :pdf_url, type: String
 
-  embedded_in :department
-  embedded_in :epigraph
+  searchkick
+
+  belongs_to :department, optional: true
+  belongs_to :epigraph, optional: true
 end
