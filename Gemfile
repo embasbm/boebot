@@ -8,6 +8,7 @@ gem 'puma', '~> 3.11'
 
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'mongoid'
+gem 'searchkick'
 gem 'figaro'
 
 group :development, :test do
