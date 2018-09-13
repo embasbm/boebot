@@ -5,11 +5,13 @@ class Diary
   field :nbo, type: String
   field :pdf_url, type: String
   field :fecha, type: String
+
   searchkick
 
   embeds_many :sections
 
   def search_data
-    as_json only: [:pdf_url]
+    as_json only: [:title]
   end
+
 end
