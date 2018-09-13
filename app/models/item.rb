@@ -1,4 +1,3 @@
-# Item class
 class Item
   include Mongoid::Document
   searchkick
@@ -10,4 +9,7 @@ class Item
   embedded_in :department
   embedded_in :epigraph
 
+  def search_data
+    as_json only: [:title]
+  end
 end
