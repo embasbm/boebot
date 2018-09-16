@@ -1,7 +1,6 @@
 class Api::V1::DepartmentsController < ApplicationController
   def index
-    @sections = Diary.find(params[:diary_id])&.sections
-    @departments = @sections.collect {|x| x.departments}.flatten
+    @departments = Section.find(params[:section_id])&.departments
     render json: @departments
   end
 end
