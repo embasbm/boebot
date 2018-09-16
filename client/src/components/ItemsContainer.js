@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
+import Item from "./Item";
 
-class Item extends Component {
+class ItemsContainer extends Component {
   render() {
     return (
-      <div>
-        {this.props.item.title}
+      <div className="ItemsContainer">
+        <div className="items-list">
+          {this.props.items.map((item, index) => {
+            return (<Item item={item} index={index} />)
+          })}
+        </div>
       </div>
     )
   }
 }
 
-export default Item;
+export default ItemsContainer;

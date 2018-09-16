@@ -21,17 +21,7 @@ class Department extends Component {
   }
 
   render() {
-    return (
-      <div className="section-single-item">
-        <div className="items-list">
-          {this.state.items.map((item, index) => {
-            return (
-              <ItemsContainer item={item} />
-            )
-          })}
-        </div>
-      </div >
-    )
+    return (<ItemsContainer items={this.state.items} />)
   }
 }
 
