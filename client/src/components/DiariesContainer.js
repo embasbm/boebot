@@ -18,7 +18,7 @@ class DiariesContainer extends Component {
         diaries: response.data
       })
     })
-      .catch(error => console.log(error))
+    .catch(error => console.log(error))
   }
 
   render() {
