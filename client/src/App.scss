@@ -26,3 +26,15 @@
   /* from { transform: rotate(0deg); } */
   /* to { transform: rotate(360deg); } */
 }
+
+.Diaries-container {
+  width: 90%;
+  border: 1px solid #0e4278;
+  margin: auto;
+  border-radius: 5px;
+  padding: 6px;
+}
+
+.Diaries-container:hover {
+  background: grey;
+}

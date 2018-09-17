@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './boe_logo.svg';
-import './App.css';
+import './App.scss';
 import DiariesContainer from './components/DiariesContainer';
 
 class App extends Component {
