@@ -22,7 +22,7 @@ class DiariesContainer extends Component {
 
   render() {
     return (
-      <div className="Diaries-container">
+      <div className="boe--diaries-container">
         {this.state.diaries.map( (diary, index) => {
           return (<Diary diary={diary} key={index} />)
         })}

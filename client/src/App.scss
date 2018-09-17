@@ -1,40 +1,28 @@
-.BoeApp {
+$boe-dark: #0e4278;
+
+.boe {
   text-align: center;
-}
 
-.BoeApp-logo {
-  animation: BoeApp-logo-spin infinite 20s linear;
-  height: 80px;
-}
+  &--header {
+    background-color: white;
+    height: 150px;
+    padding: 20px;
+  }
 
-.BoeApp-header {
-  background-color: white;
-  height: 150px;
-  padding: 20px;
-}
+  &--logo {
+    height: 80px;
+    animation: roll 3s infinite;
+    transform: scale(2);
+  }
 
-.BoeApp-title {
-  font-size: 1.5em;
-}
+  &--diaries-container {
+    border: 1px solid $boe-dark;
+    margin: auto;
+    border-radius: 5px;
+    padding: 6px;
 
-.BoeApp-intro {
-  font-size: large;
-}
-
-@keyframes BoeApp-logo-spin {
-  from { transform: scale(0.7); }
-  /* from { transform: rotate(0deg); } */
-  /* to { transform: rotate(360deg); } */
-}
-
-.Diaries-container {
-  width: 90%;
-  border: 1px solid #0e4278;
-  margin: auto;
-  border-radius: 5px;
-  padding: 6px;
-}
-
-.Diaries-container:hover {
-  background: grey;
+    &:hover {
+      background: grey;
+    }
+  }
 }
