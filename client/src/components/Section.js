@@ -30,6 +30,7 @@ class Section extends Component {
                 diary={this.props.diary}
                 section={this.props.section}
                 departments={this.state.departments}
+                key={index}
               />
             )
           })}

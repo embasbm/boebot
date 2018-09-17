@@ -7,7 +7,7 @@ class ItemsContainer extends Component {
       <div className="ItemsContainer">
         <div className="items-list">
           {this.props.items.map((item, index) => {
-            return (<Item item={item} index={index} />)
+            return (<Item item={item} key={index}/>)
           })}
         </div>
       </div>

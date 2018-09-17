@@ -13,7 +13,6 @@ class DiariesContainer extends Component {
   componentDidMount(){
     axios.get('api/v1/diaries.json')
     .then(response => {
-      console.log(response);
       this.setState({
         diaries: response.data
       })

@@ -13,7 +13,7 @@ class EpigraphsContainer extends Component {
                 section={this.props.section}
                 department={this.props.department}
                 epigraph={epigraph}
-                index={index}
+                key={index}
               />
             )
           })}
