@@ -2,7 +2,8 @@
 
 # TODO
 
-* api versioning
+~~* api versioning~~
+~~* react introduction~~
+* react introduction - search option
 * twitter api
-* react introduction
 * translation

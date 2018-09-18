@@ -1,0 +1,65 @@
+$boe-dark: #0e4278;
+
+.boe {
+  text-align: center;
+
+  &--header {
+    background-color: white;
+    height: 150px;
+    padding: 20px;
+  }
+
+  &--logo {
+    height: 80px;
+    animation: roll 3s infinite;
+    transform: scale(2);
+  }
+
+  .diary {
+    border: 1px solid $boe-dark;
+    margin: auto;
+    border-radius: 5px;
+    padding: 6px;
+
+    &:hover {
+      background: $boe-dark;
+      *, a { color: white; }
+    }
+
+    .section {
+      text-align: left;
+      margin: 2px;
+      border: 1px solid;
+      padding-left: 10px;
+
+      &:hover {
+        background: white;
+        *, a { color: $boe-dark; }
+      }
+
+      .department {
+        text-align: left;
+        margin: 2px;
+        border: 1px solid;
+        padding-left: 10px;
+
+        &:hover {
+          background: $boe-dark;
+          *, a { color: white; }
+        }
+
+        .epigraph {
+          text-align: left;
+          margin: 2px;
+          border: 1px solid;
+          padding-left: 10px;
+
+          &:hover {
+            background: white;
+            *, a { color: $boe-dark; }
+          }
+        }
+      }
+    }
+  }
+}
