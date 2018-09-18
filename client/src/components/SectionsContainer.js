@@ -8,7 +8,7 @@ class SectionsContainer extends Component {
 
   render() {
     return (
-      <div className="Sections-container">
+      <div className="sections">
         {this.props.sections.map((section, index) => {
           return (<Section section={section} key={index} diary={this.props.diary}/>)
         })}

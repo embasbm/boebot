@@ -1,9 +1,9 @@
 import React from 'react';
 
 const Item = ({ item }) =>
-  <div className="single-item">
+  <div className="item">
     <h4>{item.title}</h4>
-    <p>{item.pdf_url}</p>
+    <p><a href={item.pdf_url} target="_blank">Complete PDF</a></p>
   </div>
 
 export default Item;

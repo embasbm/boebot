@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Collapse } from 'react-collapse';
 import ItemsContainer from "./ItemsContainer";
 
 class Epigraph extends Component {
@@ -21,7 +22,15 @@ class Epigraph extends Component {
   }
 
   render() {
-    return (<ItemsContainer items={this.state.items} />)
+    const { isOpened } = this.state;
+    return (
+      <div className="epigraph">
+        <h2 onClick={() => this.setState({ isOpened: !isOpened })}>{this.props.epigraph.name}</h2>
+        <Collapse isOpened={isOpened} hasNestedCollapse={true}>
+          <ItemsContainer items={this.state.items} />
+        </Collapse>
+      </div>
+    )
   }
 }
 

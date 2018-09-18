@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import { Collapse } from 'react-collapse';
 import DepartmentsContainer from "./DepartmentsContainer";
 
 class Section extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      isOpened: false,
       departments: []
     }
   }
@@ -21,9 +23,11 @@ class Section extends Component {
   }
 
   render() {
+    const { isOpened } = this.state;
     return (
-      <div className="section-single-item">
-        <div className="departments-list">
+      <div className="section">
+        <h2 onClick={() => this.setState({ isOpened: !isOpened })}>{this.props.section.name} - {this.props.section.number}</h2>
+        <Collapse isOpened={isOpened} hasNestedCollapse={true}>
           {this.state.departments.map((department, index) => {
             return (
               <DepartmentsContainer
@@ -34,7 +38,7 @@ class Section extends Component {
               />
             )
           })}
-        </div>
+        </Collapse>
       </div >
     )
   }

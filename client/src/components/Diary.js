@@ -25,16 +25,11 @@ class Diary extends Component {
   render() {
     const {isOpened} = this.state;
     return (
-      <div
-        className="diary-single-item"
-        onClick={() => this.setState({ isOpened: !isOpened })}
-        >
-        <h4>{this.props.diary.date_pub}</h4>
-        <p>{this.props.diary.pdf_url}</p>
+      <div className="diary">
+        <h2 onClick={() => this.setState({ isOpened: !isOpened })}>{this.props.diary.date_pub}</h2>
         <Collapse isOpened={isOpened} hasNestedCollapse={true}>
-          <div className="sections">
-            <SectionsContainer sections={this.state.sections} diary={this.props.diary} />
-          </div>
+          <p><a href={this.props.diary.pdf_url} target="_blank">Complete PDF</a></p>
+          <SectionsContainer sections={this.state.sections} diary={this.props.diary} />
         </Collapse>
       </div >
     )
