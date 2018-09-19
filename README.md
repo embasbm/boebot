@@ -6,4 +6,4 @@
 ~~* react introduction~~
 * react introduction - search option
 * twitter api
-* translation
+* translations (in both back end and frontend)
