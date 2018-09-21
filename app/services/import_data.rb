@@ -1,7 +1,7 @@
 require 'open-uri'
 class ImportData
   def initialize(day = nil)
-    @day = day || Date.today.strftime('%Y%m%d')
+    @day = day || Date.today
     @boe_url = 'https://www.boe.es'
     retriev_boe_data
   end
@@ -15,12 +15,16 @@ class ImportData
   end
 
   def fetch_xml
-    @doc = Nokogiri::XML(open("#{@boe_url}/diario_boe/xml.php?id=BOE-S-#{@day}")) do |config|
-      config.strict.noblanks
-      config.strict.noent
-      config.strict.noerror
-      config.strict.strict
-      config.strict.nonet
+    loop do
+      @doc = Nokogiri::XML(open("#{@boe_url}/diario_boe/xml.php?id=BOE-S-#{@day.strftime('%Y%m%d')}")) do |config|
+        config.strict.noblanks
+        config.strict.noent
+        config.strict.noerror
+        config.strict.strict
+        config.strict.nonet
+      end
+      @day -= 1.day
+      break if @doc&.children&.first&.children&.first&.children&.first&.children.present?
     end
   end
 
