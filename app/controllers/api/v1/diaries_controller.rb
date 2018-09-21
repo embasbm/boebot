@@ -6,6 +6,6 @@ class Api::V1::DiariesController < ApplicationController
 
   def search
     @search = Item.search params[:search]
-    render json: @search
+    render json: {search: @search}
   end
 end
