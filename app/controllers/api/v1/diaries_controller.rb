@@ -15,7 +15,7 @@ class Api::V1::DiariesController < ApplicationController
   def seed_data
     t=Time.now
     return if t.sunday? || t.saturday?
-    if Diary.last.fecha.to_date != Date.today || Diary.all.empty?
+    if Diary.all.empty? || Diary.last.fecha.to_date != Date.today
       ImportData.new
       reindex_all_items
     end
