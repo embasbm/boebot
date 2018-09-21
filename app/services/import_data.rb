@@ -1,3 +1,4 @@
+require 'open-uri'
 class ImportData
   def initialize(day = nil)
     @day = day || Date.today.strftime('%Y%m%d')
