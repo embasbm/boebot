@@ -16,7 +16,7 @@ class Api::V1::DiariesController < ApplicationController
     t=Time.now
     if Diary.all.empty? || Diary.last.fecha.to_date != Date.today
       ImportData.new
-      reindex_all_items
+      # reindex_all_items
     end
   end
 
