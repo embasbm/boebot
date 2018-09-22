@@ -8,6 +8,14 @@ class Api::V1::DiariesController < ApplicationController
 
   def search
     @search = Item.search params[:search]
+    @search.collect do |s|
+      if s.epigraph
+        s.attributes.merge!({epigraph_name: s.epigraph.name})
+      end
+      if s.department
+        s.attributes.merge!({department_name: s.department.name})
+      end
+    end
     render json: {search: @search}
   end
 
