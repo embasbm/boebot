@@ -33,7 +33,7 @@ class Diary extends Component {
         if (data.search) {
           this.setState({
             search_result: data.search,
-            isOpened: false,
+            isOpened: true,
             sections: []
           })
         } else {

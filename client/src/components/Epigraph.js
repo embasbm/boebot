@@ -28,7 +28,7 @@ class Epigraph extends Component {
       <div className="epigraph">
         <h2 onClick={() => this.setState({ isOpened: !isOpened })}>{this.props.epigraph.name}</h2>
         <Collapse isOpened={isOpened} hasNestedCollapse={true}>
-          <ItemsContainer items={this.state.items} />
+          <ItemsContainer items={this.state.items} epigraph={this.props.epigraph} />
         </Collapse>
       </div>
     )
