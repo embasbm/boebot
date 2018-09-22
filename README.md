@@ -4,7 +4,7 @@
 
 ~~* api versioning~~
 ~~* react introduction~~
-* react introduction - search option
+~~* react introduction - search option~~
 * twitter api
 * translations (in both back end and frontend)
 * clasify item by egipgraphs or departments
