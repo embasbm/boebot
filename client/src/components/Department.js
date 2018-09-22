@@ -32,7 +32,7 @@ class Department extends Component {
       <div className="department">
         <h2 onClick={() => this.setState({ isOpened: !isOpened })}>{this.props.department.name}</h2>
         <Collapse isOpened={isOpened} hasNestedCollapse={true}>
-          { this.state.items && <ItemsContainer items={this.state.items} /> }
+          {this.state.items && <ItemsContainer items={this.state.items} department={this.props.department} /> }
           { this.state.epigraphs &&
             <EpigraphsContainer
               diary={this.props.diary}
