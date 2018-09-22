@@ -5,5 +5,5 @@ class Section
   field :number, type: String
 
   belongs_to :diary
-  has_many :departments
+  has_many :departments, dependent: :destroy
 end

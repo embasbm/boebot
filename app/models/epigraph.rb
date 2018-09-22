@@ -3,5 +3,5 @@ class Epigraph
   field :name, type: String
 
   belongs_to :department
-  has_many :items
+  has_many :items, dependent: :destroy
 end

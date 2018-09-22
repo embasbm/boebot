@@ -6,5 +6,5 @@ class Diary
   field :pdf_url, type: String
   field :fecha, type: String
 
-  has_many :sections
+  has_many :sections, dependent: :destroy
 end
