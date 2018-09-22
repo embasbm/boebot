@@ -6,7 +6,14 @@ class ItemsContainer extends Component {
     return (
       <div className="items">
         {this.props.items.map((item, index) => {
-          return (<Item item={item} key={index} />)
+          return (
+            <Item
+              item={item}
+              key={index}
+              department={this.props.department}
+              epigraph={this.props.epigraph}
+            />
+          )
         })}
       </div>
     )
